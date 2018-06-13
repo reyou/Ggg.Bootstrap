@@ -1,0 +1,202 @@
+﻿
+@{
+    ViewData["Title"] = "Alignment";
+}
+
+<h2>Alignment</h2>
+<p>
+    <a href="https://getbootstrap.com/docs/4.0/layout/grid/#alignment">
+        https://getbootstrap.com/docs/4.0/layout/grid/#alignment
+    </a>
+</p>
+<p>
+    <b>Alignment</b>
+    Use flexbox alignment utilities to vertically and horizontally align columns.
+    <b>Vertical alignment</b>
+</p>
+<div class="container">
+    <div class="row">
+        Random Row below (row align-items-start)
+    </div>
+    <div class="row align-items-start" style="height: 100px">
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+    </div>
+    <div class="row">
+        Random Row below (row align-items-center)
+    </div>
+    <div class="row align-items-center" style="height: 100px">
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+    </div>
+    <div class="row">
+        Random Row below (row align-items-end)
+    </div>
+    <div class="row align-items-end" style="height: 100px">
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+        <div class="col">
+            One of three columns (col)
+        </div>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row" style="height: 100px">
+        <div class="col align-self-start">
+            One of three columns (col align-self-start)
+        </div>
+        <div class="col align-self-center">
+            One of three columns (col align-self-center)
+        </div>
+        <div class="col align-self-end">
+            One of three columns (col align-self-end)
+        </div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>Horizontal alignment</b>
+</p>
+<div class="container">
+    <div class="row" style="margin-top: 20px">
+        Empty Row (row justify-content-start) below
+    </div>
+    <div class="row justify-content-start">
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        Empty Row (row justify-content-center) below
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        Empty Row (row justify-content-end) below
+    </div>
+    <div class="row justify-content-end">
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        Empty Row (row justify-content-around) below
+    </div>
+    <div class="row justify-content-around">
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+        Empty Row (row justify-content-between) below
+    </div>
+    <div class="row justify-content-between">
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+        <div class="col-4">
+            One of two columns (col-4)
+        </div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>No gutters</b>
+    The gutters between columns in our predefined grid classes can be removed
+    with .no-gutters. This removes the negative margins from .row and the
+    horizontal padding from all immediate children columns.
+</p>
+<div class="container">
+    <div class="row no-gutters">
+        <div class="col-12 col-sm-6 col-md-8">.col-12 .col-sm-6 .col-md-8</div>
+        <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>Column wrapping</b>
+    If more than 12 columns are placed within a single row,
+    each group of extra columns will, as one unit,
+    wrap onto a new line.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-9">.col-9</div>
+        <div class="col-4">
+            .col-4<br>Since 9 + 4 = 13 &gt; 12, this 4-column-wide div
+            gets wrapped onto a new line as one contiguous unit.
+        </div>
+        <div class="col-6">.col-6<br>Subsequent columns continue along the new line.</div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>Column breaks</b>
+    Breaking columns to a new line in flexbox requires a small hack:
+    add an element with width: 100% wherever you want to wrap your columns
+    to a new line. Normally this is accomplished with multiple .rows, but
+    not every implementation method can account for this.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+
+        <!-- Force next columns to break to new line -->
+        <div class="w-100"></div>
+
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+        <div class="col-6 col-sm-3">.col-6 .col-sm-3</div>
+    </div>
+</div>
+<hr />
+<p>
+    You may also apply this break at specific breakpoints with our responsive display utilities.
+    <b>Force next columns to break to new line at md breakpoint and up</b>
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+
+        <!-- Force next columns to break to new line at md breakpoint and up -->
+        <div class="w-100 d-none d-md-block"></div>
+
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+        <div class="col-6 col-sm-4">.col-6 .col-sm-4</div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+﻿@using Bootstrap.Web.Controllers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+ @{
+     foreach (ViewItem item in Model)
+     {
+         <div>
+             <a href="@item.GetLink()">@item.DirectoryName/@item.FileInfoName</a>
+         </div>
+     }
+ }

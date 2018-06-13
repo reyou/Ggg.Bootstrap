@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewData["Title"] = "AutoLayoutColumns";
+}
+
+<h2>AutoLayoutColumns</h2>
+<p>
+    <a href="https://getbootstrap.com/docs/4.0/layout/grid/">https://getbootstrap.com/docs/4.0/layout/grid/</a>
+</p>
+<p>
+    Utilize breakpoint-specific column classes for easy column sizing without an explicit 
+    numbered class like .col-sm-6.
+    For example, here are two grid layouts that apply to every device and viewport, 
+    from xs to xl. Add any number of unit-less classes for each breakpoint you need and every column will be the same width.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 2 (col)
+        </div>
+        <div class="col">
+            2 of 2 (col)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3 (col)
+        </div>
+        <div class="col">
+            2 of 3 (col)
+        </div>
+        <div class="col">
+            3 of 3 (col)
+        </div>
+    </div>
+</div>
+<hr/>
+<p>
+    Equal-width columns can be broken into multiple lines, but there was a Safari
+    flexbox bug that prevented this from working without an explicit flex-basis or border.
+    There are workarounds for older browser versions, but they shouldn’t be necessary if you’re up-to-date.
+    <b>Equal-width multi-row</b>
+    Create equal-width columns that span multiple rows by inserting a .w-100 where you want
+    the columns to break to a new line. Make the breaks responsive by mixing the
+    .w-100 with some responsive display utilities.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col">Column (col)</div>
+        <div class="col">Column (col) (following with w-100)</div>
+        <div class="w-100"></div>
+        <div class="col">Column (col)</div>
+        <div class="col">Column (col)</div>
+    </div>
+</div>
+<hr/>
+<p>
+    <b>Setting one column width</b>
+    Auto-layout for flexbox grid columns also means you can set the width of one column and 
+    have the sibling columns automatically resize around it. You may use predefined grid classes 
+    (as shown below), grid mixins, or inline widths. Note that the other columns will resize 
+    no matter the width of the center column.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            1 of 3 (col)
+        </div>
+        <div class="col-6">
+            2 of 3 (wider - col-6)
+        </div>
+        <div class="col">
+            3 of 3 (col)
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3 (col)
+        </div>
+        <div class="col-5">
+            2 of 3 (wider - col-5)
+        </div>
+        <div class="col">
+            3 of 3 (col)
+        </div>
+    </div>
+</div>
+<hr/>
+<p>
+    <b>Variable width content</b>
+    Use col-{breakpoint}-auto classes to size columns based on the natural width of their content.
+</p>
+<div class="container">
+    <div class="row">
+        below row (row justify-content-md-center)
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col col-lg-2">
+            1 of 3 (col col-lg-2)
+        </div>
+        <div class="col-md-auto">
+            Variable width content (col-md-auto)
+        </div>
+        <div class="col col-lg-2">
+            3 of 3 (col col-lg-2)
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        This is just a random content (row justify-content-md-center)
+    </div>
+    <div class="row">
+        <div class="col">
+            1 of 3 (col)
+        </div>
+        <div class="col-md-auto">
+            Variable width content (col-md-auto)
+        </div>
+        <div class="col col-lg-2">
+            3 of 3 (col col-lg-2)
+        </div>
+    </div>
+</div>
+<hr/>

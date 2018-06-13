@@ -1,0 +1,119 @@
+﻿
+@{
+    ViewData["Title"] = "Reordering";
+}
+
+<h2>Reordering</h2>
+<a href="https://getbootstrap.com/docs/4.0/layout/grid/#reordering">
+    https://getbootstrap.com/docs/4.0/layout/grid/#reordering
+</a>
+<p>
+    <b>Reordering</b>
+    Order classes
+    Use .order- classes for controlling the visual order of your content.
+    These classes are responsive, so you can set the order by breakpoint
+    (e.g., .order-1.order-md-2). Includes support for 1 through 12 across all five grid tiers.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            First, but unordered (col)
+        </div>
+        <div class="col order-12">
+            Second, but last (col order-12)
+        </div>
+        <div class="col order-1">
+            Third, but first (order-1)
+        </div>
+    </div>
+</div>
+<hr />
+<p>
+    There are also responsive .order-first and .order-last classes that change
+    the order of an element by applying order: -1 and order: 13 (order: $columns + 1),
+    respectively. These classes can also be intermixed with the numbered .order-*
+    classes as needed.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col order-last">
+            First, but last (col order-last)
+        </div>
+        <div class="col">
+            Second, but unordered (col)
+        </div>
+        <div class="col order-first">
+            Third, but first (col order-first)
+        </div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>Offsetting columns</b>
+    You can offset grid columns in two ways: our responsive .offset- grid
+    classes and our margin utilities. Grid classes are sized to match columns
+    while margins are more useful for quick layouts where the width of the
+    offset is variable.
+    <b>Offset classes</b>
+    Move columns to the right using .offset-md-* classes. These classes
+    increase the left margin of a column by * columns. For example,
+    .offset-md-4 moves .col-md-4 over four columns.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 offset-md-4">.col-md-4 .offset-md-4</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+        <div class="col-md-3 offset-md-3">.col-md-3 .offset-md-3</div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 offset-md-3">.col-md-6 .offset-md-3</div>
+    </div>
+</div>
+<hr />
+<p>
+    In addition to column clearing at responsive breakpoints,
+    you may need to reset offsets. See this in action in the
+    grid example.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-5 col-md-6">.col-sm-5 .col-md-6</div>
+        <div class="col-sm-5 offset-sm-2 col-md-6 offset-md-0">.col-sm-5 .offset-sm-2 .col-md-6 .offset-md-0</div>
+    </div>
+    <div class="row">
+        Empty Row
+    </div>
+    <div class="row">
+        <div class="col-sm-6 col-md-5 col-lg-6">.col-sm-6 .col-md-5 .col-lg-6</div>
+        <div class="col-sm-6 col-md-5 offset-md-2 col-lg-6 offset-lg-0">.col-sm-6 .col-md-5 .offset-md-2 .col-lg-6 .offset-lg-0</div>
+    </div>
+</div>
+<hr />
+<p>
+    <b>Margin utilities</b>
+    With the move to flexbox in v4, you can use margin utilities like .mr-auto to
+    force sibling columns away from one another.
+</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">.col-md-4</div>
+        <div class="col-md-4 ml-auto">.col-md-4 .ml-auto</div>
+    </div>
+    <div class="row">
+        Empty Row
+    </div>
+    <div class="row">
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+        <div class="col-md-3 ml-md-auto">.col-md-3 .ml-md-auto</div>
+    </div>
+    <div class="row">
+        Empty Row
+    </div>
+    <div class="row">
+        <div class="col-auto mr-auto">.col-auto .mr-auto</div>
+        <div class="col-auto">.col-auto</div>
+    </div>
+</div>
