@@ -10,14 +10,14 @@ namespace Bootstrap.Web.Controllers
 
         public string GetLink()
         {
-           StringBuilder builder = new StringBuilder();
-            builder.Append("/");
-            builder.Append(ApplicationName);
+            StringBuilder builder = new StringBuilder();
+            //builder.Append("/");
+            //builder.Append(ApplicationName);
             builder.Append("/");
             builder.Append(DirectoryName);
             builder.Append("/");
             builder.Append(FileInfoName);
-            builder.Replace(".cshtml",string.Empty);
+            builder.Replace(".cshtml", string.Empty);
             return builder.ToString();
         }
     }

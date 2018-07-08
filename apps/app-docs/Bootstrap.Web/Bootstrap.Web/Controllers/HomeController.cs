@@ -28,7 +28,7 @@ namespace Bootstrap.Web.Controllers
             filterList.Add(@"Shared\Error.cshtml");
             filterList.Add(@"Shared\_Layout.cshtml");
             filterList.Add(@"Shared\_ValidationScriptsPartial.cshtml");
-            List<ViewItem> items =new List<ViewItem>();
+            List<ViewItem> items = new List<ViewItem>();
             foreach (string path in dir)
             {
                 bool any = filterList.Any(q => path.Contains(q));
@@ -39,8 +39,8 @@ namespace Bootstrap.Web.Controllers
                     string fileInfoName = fileInfo.Name;
                     items.Add(new ViewItem
                     {
-                        DirectoryName= directoryName,
-                        FileInfoName=  fileInfoName,
+                        DirectoryName = directoryName,
+                        FileInfoName = fileInfoName,
                         ApplicationName = applicationName
                     });
                 }
