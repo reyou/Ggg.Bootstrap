@@ -7,14 +7,6 @@
     @*https://getbootstrap.com/docs/4.0/getting-started/introduction/*@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
-    <div>
-        <a asp-controller="Home" asp-action="Index">Home</a>
-    </div>
-    <div>
-        @RenderBody()
-    </div>
     @*Many of our components require the use of JavaScript to function. Specifically, they
         require jQuery, Popper.js, and our own JavaScript plugins. Place the following <script>s
         near the end of your pages, right before the closing </body> tag, to enable them.
@@ -23,8 +15,14 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-
+</head>
+<body>
+    <div>
+        <a asp-controller="Home" asp-action="Index">Home</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
     @RenderSection("Scripts", required: false)
     @*ggg custom style added for easy visualization*@
     <style type="text/css">
@@ -35,31 +33,39 @@
         .container .col, .col-auto {
             border: 1px solid red;
         }
+
         .container .col-sm {
             border: 1px solid blue;
         }
 
         .container .col-3, .col-md-3 {
             border: 1px solid #c71585;
-        }   
+        }
+
         .container .col-4, .col-md-4 {
             border: 1px solid aqua;
-        }   
+        }
+
         .container .col-5 {
             border: 1px solid #1e90ff;
         }
+
         .container .col-6, .col-md-6, .col-sm-6 {
             border: 1px solid #228b22;
         }
+
         .container .col-7 {
             border: 1px solid #708090;
         }
+
         .container .col-8 {
             border: 1px solid #ba55d3;
         }
+
         .container .col-9, .col-sm-9 {
             border: 1px solid #ff1493;
-        } 
+        }
+
         .container .col-12 {
             border: 1px solid #a0522d;
         }
