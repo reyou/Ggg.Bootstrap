@@ -20,6 +20,10 @@ namespace Bootstrap.Web.Controllers
         {
             return View();
         }
+        public IActionResult Modal()
+        {
+            return View();
+        }
         /// <summary>
         /// https://getbootstrap.com/docs/4.0/components/navs/#javascript-behavior
         /// </summary>
